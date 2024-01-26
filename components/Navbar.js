@@ -27,30 +27,30 @@ const Navbar = ({user,logout}) => {
  							<a href="#">Home</a>
  						</li> */}
  						<li class="menu-item-has-children">
- 							<a href="#">New <i class="fa fa-angle-down"></i></a>
+ 							<a href="#">Category for Games <i class="fa fa-angle-down"></i></a>
  							<div class="sub-menu mega-menu mega-menu-column-4">
  								<div class="list-item text-center">
  									<a href="#">
- 									<img src="/p1.jpg" alt="new Product"/>
- 									<h4 class="title">Product 1</h4>
+ 									<img src="/play.jpg" className='h-[238px] w-[274px]' alt="new Product"/>
+ 									<h4 class="title">PlayStation</h4>
  									</a>
  								</div>
  								<div class="list-item text-center">
  									<a href="#">
- 									<img src="/p2.jpg" alt="new Product"/>
- 									<h4 class="title">Product 2</h4>
+ 									<img src="/xbox.png" alt="new Product"/>
+ 									<h4 class="title">Xbox</h4>
  									</a>
  								</div>
  								<div class="list-item text-center">
  									<a href="#">
- 									<img src="/p3.jpg" alt="new Product"/>
- 									<h4 class="title">Product 3</h4>
+ 									<img src="/nen.png" className='h-[238px] w-[274px]' alt="new Product"/>
+ 									<h4 class="title">Nentendo</h4>
  									</a>
  								</div>
  								<div class="list-item text-center">
  									<a href="#">
- 									<img src="/p4.jpg" alt="new Product"/>
- 									<h4 class="title">Product 4</h4>
+ 									<img src="/pc.png" className='h-[238px] w-[300px]' alt="new Product"/>
+ 									<h4 class="title">Pc</h4>
  								   </a>
  								</div>
  							</div>
@@ -125,7 +125,7 @@ const Navbar = ({user,logout}) => {
  								<ul>
  									<li><Link href={'/Login'}>Login</Link></li>
  									<li><Link href={'/Singup'}>Register</Link></li>
- 									{user.value && <li onClick={logout}>Logout</li>}
+ 									{user.value && <li className='cursor-pointer' onClick={logout}>Logout</li>}
  									{/* <li><a href="#">404 Page</a></li> */}
  								</ul>
  							</div>
