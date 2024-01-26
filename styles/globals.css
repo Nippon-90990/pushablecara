@@ -482,6 +482,23 @@ button.white{
     transition: 0.2s;
 }
 
+.button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: white;
+    background-color: #088178;
+    border-radius: 4px;
+    cursor: pointer;
+    /* border: none; */
+    outline: none;
+    transition: 0.2s;
+  }
+
+  .button:hover{
+    border: #000000;
+  }
+
 body{
     width: 100%;
 }
@@ -902,6 +919,7 @@ footer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    font-weight: 700;
 }
 
 footer .col{
@@ -930,6 +948,7 @@ footer a{
     text-decoration: none;
     color: #222;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 footer .follow{

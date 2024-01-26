@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
 import { FaSearch,FaHeart,FaOpencart } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
 
-const Navbar = () => {
+const Navbar = ({user,logout}) => {
   return (
     <div className='bg-pink-0 shadow-xl bg-bgcus header font-bold'>
       <div className='container'>
@@ -58,7 +59,7 @@ const Navbar = () => {
  							<a href="#">Shop <i class="fa fa-angle-down"></i></a>
  							<div class="sub-menu mega-menu mega-menu-column-4">
                                <div class="list-item">
-                               	  <h4 class="title">Men's Fashion</h4>
+                               	  <h4 class="title">Men's Fashion<FaArrowRight /></h4>
                                	  <ul>
                                	  	 <li><a href="#">Product List</a></li>
                                	  	 <li><a href="#">Product List</a></li>
@@ -122,10 +123,10 @@ const Navbar = () => {
  							<a href="#">Acounts <i class="fas fa-angle-down"></i></a>
  							<div class="sub-menu single-column-menu">
  								<ul>
- 									<li><a href="#">Login</a></li>
- 									<li><a href="#">Register</a></li>
- 									{/* <li><a href="#">Faq</a></li>
- 									<li><a href="#">404 Page</a></li> */}
+ 									<li><Link href={'/Login'}>Login</Link></li>
+ 									<li><Link href={'/Singup'}>Register</Link></li>
+ 									{user.value && <li onClick={logout}>Logout</li>}
+ 									{/* <li><a href="#">404 Page</a></li> */}
  								</ul>
  							</div>
  						</li>
