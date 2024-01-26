@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
-import { toast, ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css';
+// import { toast, ToastContainer } from 'react-toastify'
+// import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/router';
 
+import toast,{ Toaster } from 'react-hot-toast'
 
 const Singup = () => {
   const [name, setName] = useState('')
@@ -56,7 +57,7 @@ const Singup = () => {
   }
   return (
     <div>
-      <ToastContainer
+      {/* <ToastContainer
         position="top-left"
         autoClose={5000}
         hideProgressBar={false}
@@ -67,7 +68,11 @@ const Singup = () => {
         draggable
         pauseOnHover
         theme="light"
-      />
+      /> */}
+      <Toaster
+        position="top-left"
+        reverseOrder={false}
+        />
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
